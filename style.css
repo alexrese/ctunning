@@ -1,3 +1,11 @@
 .carousel-item h5, .carousel-item p{
     text-shadow: 1px 1px 2px black;
 }
+
+.container-fluid img{
+    max-width: 80px;
+}
+
+#contato{
+    background-color: rgb(225, 225, 225);
+}
