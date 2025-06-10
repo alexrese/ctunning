@@ -16,6 +16,26 @@
         crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" href="img/logo 2 em png.png" type="image/png">
+
+    <script>
+        function meuEvento(){
+
+            let email = parseInt(document.getElementById("exampleInputEmail1").value);
+            let assunto = parseInt(document.getElementById("exempleAssunto").value);
+            let descricao = document.getElementById("exampleDescricao");
+        
+            descricao.innerHTML = email+assunto; 
+            
+            console.log(email);
+            console.log(assunto);
+            console.log(descricao);
+        }
+
+        function mudaBotao(){
+            let btn = document.getElementById("btnExemplo");
+            btn.style.backgroundColor = "red";
+        }
+    </script>
 </head>
 
 <body>
@@ -97,7 +117,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card’s content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary" onclick="mudaBotao();" id="btnExemplo">Exemplo</a>
                     </div>
                 </div>
             </div>
@@ -166,18 +186,18 @@
                             <div id="emailHelp" class="form-text">Digite aqui o seu e-mail.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Assunto</label>
-                            <input type="text" class="form-control" id="">
+                            <label for="exempleAssunto" class="form-label">Assunto</label>
+                            <input type="text" class="form-control" id="exempleAssunto">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleDescricao" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="exampleDescricao" rows="3"></textarea>
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Quero receber e-mails.</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" onclick="meuEvento();" class="btn btn-primary">Enviar</button>
                     </form>
                 </div>
             </div>
